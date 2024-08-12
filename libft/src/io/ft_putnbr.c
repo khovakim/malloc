@@ -2,12 +2,12 @@
 
 void ft_putchar(const char ch);
 
+// INT_MAX ==  2147483647 (for 32-bit Integers)
+// INT_MIN == -2147483648 (for 32-bit Integers)
+// INT_MAX ==  9223372036854775807 (for 64-bit Integers)
+// INT_MIN == -9223372036854775808 (for 64-bit Integers)
 void ft_putnbr(int nb)
 {
-    // INT_MAX ==  2147483647 (for 32-bit Integers)
-    // INT_MIN == -2147483648 (for 32-bit Integers)
-    // INT_MAX ==  9223372036854775807 (for 64-bit Integers)
-    // INT_MIN == -9223372036854775808 (for 64-bit Integers)
     if (INT_MIN == nb)
     {
         ft_putchar('-');

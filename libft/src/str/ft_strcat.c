@@ -1,20 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: khovakim <khovakim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/26 15:47:27 by khovakim          #+#    #+#             */
-/*   Updated: 2024/12/26 17:36:16 by khovakim         ###   ########.fr       */
+/*   Created: 2024/12/26 19:01:03 by khovakim          #+#    #+#             */
+/*   Updated: 2024/12/26 19:30:26 by khovakim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "t_bool.h"  // for t_bool
+#include <stdlib.h> // for ssize_t
 
-t_bool	ft_isalpha(int ch)
+ssize_t	ft_strlen(const char *str);
+char	*ft_strcpy(char *dst, const char *src);
+
+char	*ft_strcat(char *dst, const char *src)
 {
-	if (('A' <= ch && ch <= 'Z') || ('a' <= ch && ch <= 'z'))
-		return (TRUE);
-	return (FALSE);
+	if (!dst || !src)
+		return (dst);
+	ft_strcpy(dst + ft_strlen(dst), src);
+	return (dst);
 }

@@ -1,20 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: khovakim <khovakim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/26 15:47:27 by khovakim          #+#    #+#             */
-/*   Updated: 2024/12/26 17:36:16 by khovakim         ###   ########.fr       */
+/*   Created: 2024/12/26 17:55:59 by khovakim          #+#    #+#             */
+/*   Updated: 2024/12/26 17:59:21 by khovakim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "t_bool.h"  // for t_bool
+#include "t_bool.h"  // t_bool
 
-t_bool	ft_isalpha(int ch)
+t_bool	ft_isspace(int c)
 {
-	if (('A' <= ch && ch <= 'Z') || ('a' <= ch && ch <= 'z'))
-		return (TRUE);
-	return (FALSE);
+	return (c == ' ' || c == '\t' || c == '\n'
+		|| c == '\v' || c == '\f' || c == '\r');
 }

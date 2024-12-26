@@ -1,20 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: khovakim <khovakim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/26 15:47:27 by khovakim          #+#    #+#             */
-/*   Updated: 2024/12/26 17:36:16 by khovakim         ###   ########.fr       */
+/*   Created: 2024/12/26 18:39:13 by khovakim          #+#    #+#             */
+/*   Updated: 2024/12/26 19:03:32 by khovakim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "t_bool.h"  // for t_bool
+#include <stddef.h>  // for NULL
 
-t_bool	ft_isalpha(int ch)
+char	*ft_strchr(const char *s, int c)
 {
-	if (('A' <= ch && ch <= 'Z') || ('a' <= ch && ch <= 'z'))
-		return (TRUE);
-	return (FALSE);
+	while (*s && *s != c)
+		++s;
+	if (*s == c)
+		return ((char *)s);
+	return (NULL);
 }

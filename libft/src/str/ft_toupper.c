@@ -1,20 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: khovakim <khovakim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/26 15:47:27 by khovakim          #+#    #+#             */
-/*   Updated: 2024/12/26 17:36:16 by khovakim         ###   ########.fr       */
+/*   Created: 2024/12/26 18:26:01 by khovakim          #+#    #+#             */
+/*   Updated: 2024/12/26 18:28:28 by khovakim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "t_bool.h"  // for t_bool
-
-t_bool	ft_isalpha(int ch)
+int	ft_toupper(int c)
 {
-	if (('A' <= ch && ch <= 'Z') || ('a' <= ch && ch <= 'z'))
-		return (TRUE);
-	return (FALSE);
+	if ('a' <= c && c <= 'z')
+		return (c - 32);
+	return (c);
 }

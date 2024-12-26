@@ -1,20 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_is_power_of_2.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: khovakim <khovakim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/26 15:47:27 by khovakim          #+#    #+#             */
-/*   Updated: 2024/12/26 17:36:16 by khovakim         ###   ########.fr       */
+/*   Created: 2024/12/26 17:49:36 by khovakim          #+#    #+#             */
+/*   Updated: 2024/12/26 17:50:19 by khovakim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "t_bool.h"  // for t_bool
+#include "t_bool.h"  // t_bool
 
-t_bool	ft_isalpha(int ch)
+t_bool	ft_is_power_of_2(int n)
 {
-	if (('A' <= ch && ch <= 'Z') || ('a' <= ch && ch <= 'z'))
-		return (TRUE);
-	return (FALSE);
+	return (n > 0 && !(n & (n - 1)));
 }

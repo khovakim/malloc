@@ -6,9 +6,27 @@
 #    By: khovakim <khovakim@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/29 20:13:18 by khovakim          #+#    #+#              #
-#    Updated: 2024/12/26 15:32:48 by khovakim         ###   ########.fr        #
+#    Updated: 2024/12/26 18:12:36 by khovakim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
+###################
+###### Colors #####
+###################
+
+_GREY=	\033[1;30m
+_RED=	\033[1;31m
+_GREEN=	\033[1;32m
+_YELLOW=\033[1;33m
+_BLUE=	\033[1;34m
+_PURPLE=\033[1;35m
+_CYAN=	\033[1;36m
+_WHITE=	\033[1;37m
+_NC=	\033[0m
+
+###################
+###### Vars #######
+###################
 
 NAME = libft.a
 
@@ -23,6 +41,12 @@ RM = rm -rf
 ###################
 
 SRC_BOOL = \
+			ft_isalnum.c     \
+			ft_isalpha.c     \
+			ft_isdigit.c     \
+			ft_isspace.c     \
+			ft_isprintable.c \
+			ft_is_power_of_2.c
 			
 
 SRC_IO = \

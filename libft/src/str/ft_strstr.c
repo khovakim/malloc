@@ -1,20 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: khovakim <khovakim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/26 15:47:27 by khovakim          #+#    #+#             */
-/*   Updated: 2024/12/26 17:36:16 by khovakim         ###   ########.fr       */
+/*   Created: 2024/12/26 18:42:27 by khovakim          #+#    #+#             */
+/*   Updated: 2024/12/26 19:03:59 by khovakim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "t_bool.h"  // for t_bool
+#include <stddef.h>  // for NULL
 
-t_bool	ft_isalpha(int ch)
+char	*ft_strstr(const char *str1, const char *str2)
 {
-	if (('A' <= ch && ch <= 'Z') || ('a' <= ch && ch <= 'z'))
-		return (TRUE);
-	return (FALSE);
+	int	i;
+	int	j;
+
+	if (!str1)
+		return (NULL);
+	if (!*str2)
+		return ((char *)str1);
+	i = 0;
+	while (str1[i])
+	{
+		j = 0;
+		while (str1[i + j] && str2[j] && str1[i + j] == str2[j])
+			++j;
+		if (!str2[j])
+			return ((char *)&str1[i]);
+		++i;
+	}
+	return (NULL);
 }

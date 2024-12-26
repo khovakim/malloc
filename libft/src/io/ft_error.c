@@ -6,7 +6,7 @@
 /*   By: khovakim <khovakim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/26 14:22:28 by khovakim          #+#    #+#             */
-/*   Updated: 2024/12/26 14:30:07 by khovakim         ###   ########.fr       */
+/*   Updated: 2024/12/26 18:17:46 by khovakim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,5 @@ void	ft_warning(const char *msg)
 	ft_putstr_fd (RED, FD_STDERR);
 	ft_putendl_fd (msg, FD_STDERR);
 	ft_putstr_fd (RESET, FD_STDERR);
-	exit(1);
+	exit(-1);
 }

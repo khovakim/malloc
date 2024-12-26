@@ -6,7 +6,7 @@
 /*   By: khovakim <khovakim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 19:17:55 by khovakim          #+#    #+#             */
-/*   Updated: 2024/10/11 19:37:03 by khovakim         ###   ########.fr       */
+/*   Updated: 2024/12/26 14:17:29 by khovakim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ size_t	ft_strlen(const char *str);
 
 void	ft_putstr_fd(const char *str, int fd)
 {
-	if (fd <= 0)
+	if (0 >= fd)
 	{
 		ft_warning ("Invalid file descriptor.");
 		return ;

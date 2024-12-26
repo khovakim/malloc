@@ -1,29 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_io_define.h                                     :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: khovakim <khovakim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/25 17:34:00 by khovakim          #+#    #+#             */
-/*   Updated: 2024/12/26 14:27:05 by khovakim         ###   ########.fr       */
+/*   Created: 2024/12/26 13:10:33 by khovakim          #+#    #+#             */
+/*   Updated: 2024/12/26 13:13:57 by khovakim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/**
- * This is a private header file
-*/
+#include "include/ft_io_define.h"  // for FT_STDOUT
 
-#ifndef FT_IO_DEFINE_H
-# define FT_IO_DEFINE_H
+void	ft_putnbr_fd(int nbr, int fd);
 
-// defines for STDIN, STDOUT, STDERR
-# define FD_STDIN  0
-# define FD_STDOUT 1
-# define FD_STDERR 2
-
-// Defines for messages
-# define FT_ERROR "Error: "
-# define FT_WARNING "Warning: "
-
-#endif // FT_IO_DEFINE_H
+void	ft_putnbr(int nbr)
+{
+	ft_putnbr_fd(nbr, FT_STDOUT);
+}
